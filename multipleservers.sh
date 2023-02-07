@@ -2,9 +2,9 @@
 #
 source init
 
-# Name of the replicaset yaml
+# Name of the servers (simple name)
 export SERVER_NAMES=( host1 host2 host3 )
-# internal domain inside openshift
+# Domain name to be used, the FQDN will be SERVER_NAME.DOMAIN
 export DOMAIN=somedomain.com
 
 for HOST in "${SERVER_NAMES[@]}" 

@@ -2,10 +2,10 @@
 #
 source init
 
-# Name of the replicaset yaml
-export SERVERNAME=crossmachine
-# internal domain inside openshift
-export DOMAIN=crossdomain
+# Name of the server (simple name)
+export SERVERNAME=host1
+# Domain name to be used, the FQDN will be SERVER_NAME.DOMAIN
+export DOMAIN=somedomain.com
 
 export SERVER="${SERVERNAME}"
 export DNSSERVER=${SERVER}.${DOMAIN}
