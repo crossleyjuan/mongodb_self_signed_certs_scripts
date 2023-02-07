@@ -1,0 +1,62 @@
+[ req ]
+default_bits = 4096
+default_keyfile = myTestServerCertificateKey.pem    ## The default private key file name.
+default_md = sha256
+distinguished_name = req_dn
+req_extensions = v3_req
+
+[ v3_req ]
+subjectKeyIdentifier  = hash
+basicConstraints = CA:FALSE
+keyUsage = critical, digitalSignature, keyEncipherment
+nsComment = "OpenSSL Generated Certificate for TESTING only.  NOT FOR PRODUCTION USE."
+extendedKeyUsage  = serverAuth, clientAuth
+subjectAltName = @alt_names
+
+[ alt_names ]
+
+DNS.1 = ${SERVER}
+DNS.2 = ${DNSSERVER}
+
+#DNS.2 =         ##TODO: Enter the DNS names. The DNS names should match the server names.
+
+#IP.1 =          ##TODO: Enter the IP address. SAN matching by IP address is available starting in MongoDB 4.2
+
+#IP.2 =          ##TODO: Enter the IP address. SAN matching by IP address is available starting in MongoDB 4.2
+
+
+[ req_dn ]
+countryName = ES
+
+countryName_default = ES
+
+countryName_min = 2
+countryName_max = 2
+
+stateOrProvinceName = Madrid
+
+stateOrProvinceName_default = Madrid
+
+stateOrProvinceName_max = 64
+
+localityName = Madrid
+
+localityName_default = Madrid
+
+localityName_max = 64
+
+organizationName = MongoDB
+
+organizationName_default = MongoDB
+
+organizationName_max = 64
+
+organizationalUnitName = MongoDB
+
+organizationalUnitName_default = MongoDB
+
+organizationalUnitName_max = 64
+
+commonName = ${SERVER}
+commonName_default = ${SERVER}
+commonName_max = 64
