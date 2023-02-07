@@ -1,3 +1,6 @@
+#!/bin/bash
+#
+source init
 # Creates the private key
 openssl genrsa -out certs/ca.key 4096
 # creates the CA certificate

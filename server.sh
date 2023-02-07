@@ -1,3 +1,7 @@
+#!/bin/bash
+#
+source init
+
 # Name of the replicaset yaml
 export METADATANAME=test-replica-set
 # internal domain inside openshift
